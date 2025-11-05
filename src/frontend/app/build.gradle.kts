@@ -3,11 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.evm.plantland"
-    compileSdk = 36
+    namespace = "evm.plantland"
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
-        applicationId = "com.evm.plantland"
+        applicationId = "evm.plantland"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -32,13 +34,15 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.recyclerview)
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("com.google.code.gson:gson:2.13.2")
     implementation(libs.viewpager2)
+    implementation(libs.recyclerview)
+    implementation(libs.cardview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

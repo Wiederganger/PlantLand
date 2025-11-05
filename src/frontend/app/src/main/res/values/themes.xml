@@ -3,7 +3,10 @@
     <style name="Base.Theme.PlantLand" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <!-- <item name="android:background">@color/creamy</item> -->
+        <!-- <item name="buttonStyle">@style/SimpleButtons</item> -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="android:windowBackground">@color/creamy</item>
+        <item name="android:buttonStyle">@style/CKButton</item>
     </style>
 
     <style name="Theme.PlantLand" parent="Base.Theme.PlantLand" />

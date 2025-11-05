@@ -8,52 +8,120 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="85dp"
+        android:id="@+id/ll1"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
+        android:background="@color/green"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
 
         <ImageButton
-            android:id="@+id/GalleryBtn"
+            android:id="@+id/cardsbtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Ooh"
+            android:background="@drawable/group_4" />
+
+        <TextView
+            android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Gallery"
-            app:srcCompat="@android:drawable/ic_menu_gallery" />
+            android:text="Картотека"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
         <ImageButton
-            android:id="@+id/WishlistBtn"
+            android:id="@+id/wishbtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Ooh"
+            android:background="@drawable/group_3" />
+
+        <TextView
+            android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Wishlist"
-            app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+            android:text="Список желаний"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
         <ImageButton
-            android:id="@+id/AIchatBtn"
+            android:id="@+id/chatbtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Ooh"
+            android:background="@drawable/group_5" />
+
+        <TextView
+            android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="AIchat"
-            app:srcCompat="@android:drawable/sym_action_chat" />
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Спросить у ИИ"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
         <ImageButton
-            android:id="@+id/SettingsBtn"
+            android:id="@+id/notesbtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Ooh"
+            android:background="@drawable/group_6" />
+
+        <TextView
+            android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Settings"
-            app:srcCompat="@android:drawable/ic_menu_manage" />
+            android:text="Мед. заметки"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/prefsbtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/group_2"
+            android:contentDescription="Ooh"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Настройки"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/fr1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/ll1"
         app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
