@@ -52,7 +52,7 @@ def get_wished():
     close_db_connection(conn)
     for i in range(len(posts)):
         posts[i] = list(posts[i])
-    return str(posts)
+    return "{\"wishes\": " + str(posts) + '}'
 
 @app.route('/add_wished')
 def add_wished():
@@ -81,10 +81,11 @@ def get_cards():
     handle = request.args.get('handle')
     conn = get_db_connection()
     posts = conn.execute("SELECT * FROM Cards WHERE handle = ?", (handle,)).fetchall()
+    print(posts)
     close_db_connection(conn)
     for i in range(len(posts)):
         posts[i] = list(posts[i])
-    return str(posts)
+    return "{\"plants\": " + str(posts) + '}'
 
 @app.route('/add_card')
 def add_card():
@@ -123,7 +124,7 @@ def get_note():
         conn.commit()
     posts = list(conn.execute("SELECT * FROM MedNotes WHERE handle = ?", (handle,)).fetchone())
     close_db_connection(conn)
-    return str(posts)
+    return posts[1]
 
 @app.route('/upd_note')
 def upd_note():
